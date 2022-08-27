@@ -1,0 +1,17 @@
+.card-body{
+    align-content: center;
+}
+.search-Title {
+    font-size: 25px;
+    font-style:oblique;
+    padding-left: 600px;
+}
+.band{
+    max-height: 100px;
+    max-width: 500px;
+    padding-left: 600px;
+}
+.btn{
+    padding-right: 500px;
+    padding-left: 600px;
+}
