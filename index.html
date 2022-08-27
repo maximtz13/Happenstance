@@ -10,30 +10,44 @@
 </head>
 
 <body>
+    <header class="columns">
+        <div class="column is-12">
+            <a href="./privacy-policy.html"><em>Privacy Policy</em></a>
+            <a href="./terms-of-service.html"><em>Terms of Service</em></a>
+        </div>
+    </header>
     <section class="columns">
         <div class="column is-3">
             <div class="column is-12 has-background-warning mt-6 ml-6">
                 <div>
-                    <label class="column is-12 p-1">Find concerts for any artist or city:</label>
+                    <label class="column is-12 p-1">Enter A City To See Upcoming Events:</label>
                     <div>
-                        <input class="column is-12 p-1 mb-1" type="text" placeholder="Search Here">
+                        <input class="column is-12 p-1 mb-1" type="text" placeholder="Enter City Here">
                         <button type="submit" class="btn column is-12 p-1">Search</button>
                     </div>
                 </div>
                 <div class="has-background-warning container">
                     <div class="has-background-white mt-1">
-                        search
+                        <ul>
+                            <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+                            <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+                        </ul>
                     </div>
                 </div>
 
             </div>
 
             <div class="column is-12">
+                <div>
 
+                </div>
             </div>
         </div>
 
-        <div class="column is-8">
+        <div class="column is-8 has-background-warning">
+            <div class="has-background-white">
+
+            </div>
 
         </div>
     </section>
