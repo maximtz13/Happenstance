@@ -10,34 +10,60 @@
 </head>
 
 <body>
+    <header class="columns">
+
+    </header>
     <section class="columns">
         <div class="column is-3">
             <div class="column is-12 has-background-warning mt-6 ml-6">
                 <div>
-                    <label class="column is-12 p-1">Find concerts for any artist or city:</label>
+                    <label class="column is-12 p-1">Enter A City To See Upcoming Events:</label>
                     <div>
-                        <input class="column is-12 p-1 mb-1" type="text" placeholder="Search Here">
+                        <input class="column is-12 p-1 mb-1" type="text" placeholder="Enter City Here">
                         <button type="submit" class="btn column is-12 p-1">Search</button>
                     </div>
                 </div>
                 <div class="has-background-warning container">
                     <div class="has-background-white mt-1">
-                        search
+                        <div>
+                            <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+                            <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+                            <pre id="content" style="white-space: pre-wrap;"></pre>
+                        </div>
+                        <ul width="100%">
+
+                        </ul>
                     </div>
                 </div>
 
             </div>
 
             <div class="column is-12">
+                <div>
 
+                </div>
             </div>
         </div>
 
-        <div class="column is-8">
-
+        <div class="column is-8 has-background-warning mt-6">
+            <div class="columns">
+                <iframe class="column is-12"
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&src=bWF4aW10ejk5QGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=b2djdTYzdmEydHJ1YTNhZmxvaXRkcTA5NjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZmFtaWx5MTY4MDI4MDA3MzQwNjYzODQ2OTZAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%23E67C73&color=%23EF6C00&color=%23009688"
+                    style="border:solid 1px #777" width="800px" height="800px" frameborder="0" scrolling="no"></iframe>
+            </div>
         </div>
     </section>
-    <script src="./assets/js/script.js"></script>
+    <footer class="columns">
+        <div class="column is-12">
+            <a href="./privacy-policy.html"><em>Privacy Policy</em></a>
+            <a href="./terms-of-service.html"><em>Terms of Service</em></a>
+        </div>
+    </footer>
+
+
 </body>
+<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+<script src="./assets/js/script.js"></script>
 
 </html>
