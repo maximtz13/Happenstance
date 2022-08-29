@@ -10,19 +10,37 @@
 </head>
 
 <body>
+    <!-- NavBar -->
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+        </div>
+      </nav>
+
+
     <section class="columns">
         <div class="column is-3">
             <div class="column is-12 has-background-warning mt-6 ml-6">
                 <div>
-                    <label class="column is-12 p-1">Find concerts for any artist or city:</label>
+                    <!-- Search Form -->
+                    <label class="column is-12 p-1">Find events:</label>
                     <div>
-                        <input class="column is-12 p-1 mb-1" type="text" placeholder="Search Here">
-                        <button type="submit" class="btn column is-12 p-1">Search</button>
+                        <!-- Text Search -->
+                        <input class="column is-12 p-1 mb-1" type="text" placeholder="Search By Name or City">
+                        <!-- Select Category-->
+                        <div class="select is-small mb-1 is-link">
+                            <select>
+                              <option>Select Category</option>
+                              <option></option>
+                            </select>
+                          </div>
+                        <button type="submit" class="btn column is-12 p-1" id="search-btn">Search</button>
                     </div>
+                    <!-- Category Dropdown-->
+                    
                 </div>
                 <div class="has-background-warning container">
-                    <div class="has-background-white mt-1">
-                        search
+                    <div class="has-background-white mt-1" id="event-name">
+                    
                     </div>
                 </div>
 
@@ -37,6 +55,7 @@
 
         </div>
     </section>
+
     <script src="./assets/js/script.js"></script>
 </body>
 
