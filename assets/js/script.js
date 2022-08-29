@@ -12,14 +12,16 @@ const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/
 
 // Authorization scopes required by the API; multiple scopes can be
 // included, separated by spaces.
-const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
+const SCOPES = 'https://www.googleapis.com/auth/calendar';
 
 let tokenClient;
 let gapiInited = false;
 let gisInited = false;
 
+
 document.getElementById('authorize_button').style.visibility = 'hidden';
 document.getElementById('signout_button').style.visibility = 'hidden';
+document.getElementById('event_button').style.visibility = 'hidden';
 
 /**
  * Callback after api.js is loaded.
@@ -72,6 +74,7 @@ function handleAuthClick() {
             throw (resp);
         }
         document.getElementById('signout_button').style.visibility = 'visible';
+        document.getElementById('event_button').style.visibility = 'visible';
         document.getElementById('authorize_button').innerText = 'Refresh';
         await listUpcomingEvents();
     };
@@ -86,29 +89,9 @@ function handleAuthClick() {
     }
 }
 
-// events
-var resource = {
-    "summary": "Appointment",
-    "location": "Somewhere",
-    "start": {
-        "dateTime": "2011-12-16T10:00:00.000-07:00"
-    },
-    "end": {
-        "dateTime": "2011-12-16T10:25:00.000-07:00"
-    }
-};
-
-var request = gapi.client.calendar.events.insert({
-    'calendarId': 'primary',
-    'resource': resource
-});
-request.execute(function (resp) {
-    console.log(resp);
-});
-
 /**
- *  Sign out the user upon button click.
- */
+       *  Sign out the user upon button click.
+       */
 function handleSignoutClick() {
     const token = gapi.client.getToken();
     if (token !== null) {
@@ -119,6 +102,7 @@ function handleSignoutClick() {
         document.getElementById('signout_button').style.visibility = 'hidden';
     }
 }
+
 
 /**
  * Print the summary and start datetime/date of the next ten events in
@@ -154,3 +138,24 @@ async function listUpcomingEvents() {
     document.getElementById('content').innerText = output;
 }
 
+function handleEventClick() {
+    const token = gapi.client.getToken();
+    var resource = {
+        "summary": "Appointment",
+        "location": "Somewhere",
+        "start": {
+            "dateTime": "2022-08-17T10:00:00.000-07:00"
+        },
+        "end": {
+            "dateTime": "2022-08-17T10:25:00.000-07:00"
+        }
+    };
+    var request = gapi.client.calendar.events.insert({
+        'calendarId': 'primary',
+        'resource': resource
+    });
+
+    request.execute(function (resp) {
+        console.log(resp);
+    });
+}
