@@ -1,83 +1,30 @@
+var searchFormEl = document.querySelector("#form");
+var searchInputEl = document.querySelector("#submit-btn")
 
-
-// auth_token constructor
-class EventBrite {
-    constructor() {
-        this.auth_token = 'RVWBZULHJRHE764JXAPZ';
-        this.orderby = 'date';
-    }
-
-// get events from API
-
-    async eventsAPI(eventName, category) {
-        var eventsResponse = await fetch('');
-
-        var events = await eventsResponse.json();
-
-        return {
-            events
-        }
-    }
-
-// get categories from API
-
-    async getCategoriesAPI() {
-        var categoriesResponse = await fetch('https://www.eventbriteapi.com/v3/categories/?token=RVWBZULHJRHE764JXAPZ');
-
-        var categories = await categoriesResponse.json();
-
-        return {
-            categories
-        }
-    }
-
-}
-
-// category search constructor
-class searchData {
-    constructor() {
-        this.init();
-    }
-    init(){
-        // display categories in <options>
-        this.printCategories();
-    }
-    printCategories() {
-        var categoriesList = eventBrite.getCategoriesAPI()
-            .then(categories => {
-                console.log(categories);
-            })
-    }
-
-};
-var eventBrite = new EventBrite();
-var searchdata = new searchData();
-
-document.getElementById("search-btn").addEventListener("click", (event) => {
-    event.preventDefault();
-
-    var eventName = document.getElementById("event-name").value;
-    var category = document.getElementById("category").value;
-
-    if(eventName !=='') {
-        eventBrite.queryAPI(eventName, category)
-        .then(events => {
-            var eventsList = events.events.events;
-            if(events.lenth > 0) {
-                ui.displayEvents(eventsList);
-            } else {
-                ui.printMessage("Your search came up empty!");
-            }
+var getEventInfo = function (){
+    fetch("https://app.ticketmaster.com/discovery/v2/events.json?apikey=HKJWQyMTLdPzH3sRY96rdBRW592duqZq").then(function(response){
+        response.json().then(function(data) {
+            console.log(data);
         })
-    } else {
-        ui.printMessage('Add an Event or City');
+    });
+    
+};
+
+var formSubmitHandler = function(event){
+    event.preventDefault();
+    
+    var search = searchInputEl.value.trim();
+
+    if (value) {
+        getEventInfo(value);
+        searchInputEl.value = "";
     }
-})
+        else {
+            alert("Please enter a search term.");
+        }
+};
 
 
+searchInputEl.addEventListener("submit", formSubmitHandler);
 
-
-
-
-
-
+getEventInfo();
