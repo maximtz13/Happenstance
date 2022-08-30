@@ -1,3 +1,5 @@
+// start of google calendar api code
+
 /* exported gapiLoaded */
 /* exported gisLoaded */
 /* exported handleAuthClick */
@@ -144,10 +146,10 @@ function handleEventClick() {
         "summary": "Appointment",
         "location": "Somewhere",
         "start": {
-            "dateTime": "2022-08-17T10:00:00.000-07:00"
+            "dateTime": "2022-08-18T10:00:00.000-07:00"
         },
         "end": {
-            "dateTime": "2022-08-17T10:25:00.000-07:00"
+            "dateTime": "2022-08-18T10:25:00.000-07:00"
         }
     };
     var request = gapi.client.calendar.events.insert({
@@ -159,3 +161,5 @@ function handleEventClick() {
         console.log(resp);
     });
 }
+
+//google calendar api end 
