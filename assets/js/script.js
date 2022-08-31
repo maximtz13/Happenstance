@@ -3,6 +3,10 @@ function Submit(){
     localStorage.setItem("input", document.querySelector("#search").value)
     localStorage.getItem("input")
     console.log(localStorage.getItem("input"))
+    var input = localStorage.getItem("input")
+    var list= document.querySelector("#lists")
+    list.innerHTML= input
+
 }
 
 /* exported gapiLoaded */
