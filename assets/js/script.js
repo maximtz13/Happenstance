@@ -1,8 +1,10 @@
 //set function for submit btn
-function(event){
-    event.preventDefault();
-    localStorage.setItem("input", document.querySelector("#input").value)
+function Submit(){
+    localStorage.setItem("input", document.querySelector("#search").value)
+    localStorage.getItem("input")
+    console.log(localStorage.getItem("input"))
 }
+
 /* exported gapiLoaded */
 /* exported gisLoaded */
 /* exported handleAuthClick */
