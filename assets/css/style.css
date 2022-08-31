@@ -1,3 +1,43 @@
-/* * {
-    border: black solid;
-} */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#attraction-panel {
+    display: none;
+}
+
+#header {
+    position: relative;
+    top: 0px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0px;
+    min-width: 100%;
+}
+
+#results {
+    min-height: 40px;
+    border: solid 1px black;
+    border-radius: 6px;
+    min-width: 100%;
+}
+
+.border-round {
+border-radius: 6px;
+}
+
+#section-left {
+    min-width: 35vw;
+}
+
+#section-right {
+    min-width: 55vw;
+    min-height: 40vw;
+}
