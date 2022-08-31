@@ -25,16 +25,16 @@
         <section class="is-flex is-flex-direction-row is-justify-content-center">
             <div class="is-flex-direction-column m-3" id="section-left">
                 <div class="border-round bg-1 p-2 mb-4">
-                    <button class="mr-1" id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-                    <button class="mr-1" id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
-                    <button class="mr-1" id="event_button" onclick="handleEventClick()">Add Event</button>
+                    <button class="p-1 m-1 btn" id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+                    <button class="p-1 m-1 btn" id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+                    <button class="p-1 m-1 btn" id="event_button" onclick="handleEventClick()">Add Event</button>
                     <pre id="content" style="white-space: pre-wrap;"></pre>
                 </div>
 
                 <div class="bg-1 is-flex is-flex-direction-column border-round p-2">
                     <div>
-                        <label class="p-1 has-text-white has-text-weight-bold">Enter A City To See Upcoming Events:</label>
-                        <div>
+                        <label class="has-text-white has-text-weight-bold">Enter A City To See Upcoming Events:</label>
+                        <div class="btn-div">
                             <input class="p-1 mb-1" type="text" placeholder="Enter City Here" id="search">
                             <button type="submit" class="btn p-1">Search</button>
                         </div>
@@ -42,7 +42,7 @@
 
                     <div class="container width-100">
                         <div class="has-background-white mt-1" id="results">
-                            <p class="has-text-centered pt-1"><em>Results Displayed Here</em></p>
+                            <p class="has-text-centered has-text-grey-light pt-1"><em>Results Displayed Here</em></p>
                             <ul width="100%">
 
                             </ul>
@@ -61,9 +61,12 @@
 
         <footer id="footer" width="100%">
             <div class="mb-0 py-1 bg-2 is-justify-content-space-between width-100 mt-5 is-flex is-flex-direction-row">
-                <h2 class="has-text-weight-bold has-text-white mx-2">Event Calendar</h2>
+                <h2 class="has-text-weight-bold has-text-white mx-2">Made With Love by Team 10 :)</h2>
                 <div class="mx-2">
+                    <a class="has-text-white" href="./index.html"><em>Home Page</em></a>
+                    -
                     <a class="has-text-white" href="./privacy-policy.html"><em>Privacy Policy</em></a>
+                    -
                     <a class="has-text-white" href="./terms-of-service.html"><em>Terms of Service</em></a>
                 </div>
             </div>

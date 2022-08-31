@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
 #attraction-panel {
     display: none;
 }
@@ -89,4 +95,21 @@ body {
     background-size: repeat;
     overflow: hidden;
     min-height: 100vh;
+}
+
+.btn {
+    background-color: #3580bd;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #1a0840;
+}
+
+.btn:active {
+    color: black;
+    background-color: white;
 }
