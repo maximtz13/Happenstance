@@ -13,10 +13,10 @@
     <main class="is-flex is-flex-direction-column" width="100%">
 
         <header class="is-flex is-flex-direction-row mb-5" id="header">
-            <div class="is-flex is-flex-direction-column p-0 width-100">
-                <div class="jumbotron mb-0 py-1 has-background-warning" width="100%">
+            <div class="is-flex is-flex-direction-column p-0  width-100">
+                <div class="jumbotron mb-0 py-4 bg-header" width="100%">
                     <div class="container" width="100%">
-                        <h1 class="has-text-centered has-text-weight-bold">Event Calendar</h1>
+                        <h1 class="has-text-centered has-text-weight-bold h1">Event Calendar</h1>
                     </div>
                 </div>
             </div>
@@ -24,24 +24,25 @@
 
         <section class="is-flex is-flex-direction-row is-justify-content-center">
             <div class="is-flex-direction-column m-3" id="section-left">
-                <div class="border-round has-background-warning p-2 mb-4">
+                <div class="border-round bg-1 p-2 mb-4">
                     <button class="mr-1" id="authorize_button" onclick="handleAuthClick()">Authorize</button>
                     <button class="mr-1" id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
                     <button class="mr-1" id="event_button" onclick="handleEventClick()">Add Event</button>
                     <pre id="content" style="white-space: pre-wrap;"></pre>
                 </div>
 
-                <div class="has-background-warning is-flex is-flex-direction-column border-round p-2">
+                <div class="bg-1 is-flex is-flex-direction-column border-round p-2">
                     <div>
-                        <label class="p-1">Enter A City To See Upcoming Events:</label>
+                        <label class="p-1 has-text-white has-text-weight-bold">Enter A City To See Upcoming Events:</label>
                         <div>
-                            <input class="p-1 mb-1" type="text" placeholder="Enter City Here">
+                            <input class="p-1 mb-1" type="text" placeholder="Enter City Here" id="search">
                             <button type="submit" class="btn p-1">Search</button>
                         </div>
                     </div>
 
-                    <div class="has-background-warning container width-100">
+                    <div class="container width-100">
                         <div class="has-background-white mt-1" id="results">
+                            <p class="has-text-centered pt-1"><em>Results Displayed Here</em></p>
                             <ul width="100%">
 
                             </ul>
@@ -50,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="has-background-warning border-round p-4 m-3" id="section-right">
+            <div class="bg-1 border-round p-4 m-3" id="section-right">
                 <iframe
                     src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&src=bWF4aW10ejk5QGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=b2djdTYzdmEydHJ1YTNhZmxvaXRkcTA5NjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZmFtaWx5MTY4MDI4MDA3MzQwNjYzODQ2OTZAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%23E67C73&color=%23EF6C00&color=%23009688"
                     style="border:solid 1px #777" width="100%" height="100%" frameborder="0" scrolling="no">
@@ -59,11 +60,11 @@
         </section>
 
         <footer class="is-flex is-flex-direction-row" id="footer" width="100%">
-            <div class="mb-0 py-1 has-background-warning is-justify-content-space-between width-100 mt-5">
-                <h2 class="has-text-weight-bold">Event Calendar</h2>
+            <div class="mb-0 py-1 bg-1 is-justify-content-space-between width-100 mt-5">
+                <h2 class="has-text-weight-bold has-text-white">Event Calendar</h2>
                 <div>
-                    <a href="./privacy-policy.html"><em>Privacy Policy</em></a>
-                    <a href="./terms-of-service.html"><em>Terms of Service</em></a>
+                    <a class="has-text-white" href="./privacy-policy.html"><em>Privacy Policy</em></a>
+                    <a class="has-text-white" href="./terms-of-service.html"><em>Terms of Service</em></a>
                 </div>
             </div>
 
