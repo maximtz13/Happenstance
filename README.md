@@ -22,4 +22,4 @@ Eventbrite
 ![Image of Event Calendar](./assets/images/proj1.png)
 
 # Deployed Application:
-[https://maximtz13.github.io/Project-1/](https://maximtz13.github.io/Project-1/)
+[https://maximtz13.github.io/Happenstance/](https://maximtz13.github.io/Happenstance/)
